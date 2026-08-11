@@ -1,421 +1,281 @@
-/* ==========================================
-   CONFIGURACIÓN GENERAL
-========================================== */
+/* ==============================
+   ESTILOS GENERALES
+   ============================== */
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: #fff4f8;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
 }
-
-a {
-    text-decoration: none;
-}
-
-
-/* ==========================================
-   CONTENEDOR PRINCIPAL
-========================================== */
 
 #container {
-    width: 92%;
-    max-width: 1250px;
-    margin: 25px auto;
-
+    width: 1100px;
+    margin: 30px auto;
     background-color: white;
-
-    border-radius: 15px;
-
-    overflow: hidden;
-
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
 }
 
-
-/* ==========================================
+/* ==============================
    ENCABEZADO
-========================================== */
+   ============================== */
 
 #header {
-    min-height: 160px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    background: linear-gradient(
-        135deg,
-        #ff6b9a,
-        #ff9a76,
-        #ffd166
-    );
-
-    color: white;
+    height: 150px;
+    padding: 35px 45px;
+    background-color: #ffffff;
 }
 
 #logo span {
-    display: block;
-
-    font-size: 42px;
-
+    font-size: 38px;
     font-weight: bold;
-
-    margin-bottom: 10px;
-
-    text-shadow:
-        2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #159bd3;
+    letter-spacing: 1px;
 }
 
 #logo p {
-    font-size: 18px;
+    margin: 8px 0 0 5px;
+    font-size: 17px;
 }
 
-
-/* ==========================================
-   MENÚ DE NAVEGACIÓN
-========================================== */
+/* ==============================
+   MENÚ
+   ============================== */
 
 #menu {
-    background-color: #8e44ad;
+    background-color: #222;
+    border-bottom: 4px solid #00aeef;
 }
 
 #menu ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-
     display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
 }
 
-#menu ul li {
-    display: inline-block;
+#menu li {
+    margin: 0;
 }
 
 #menu a {
     display: block;
-
+    padding: 17px 25px;
     color: white;
-
-    padding: 17px 22px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 #menu a:hover {
-    background-color: #ff6b9a;
+    background-color: #00aeef;
 }
 
-
-/* ==========================================
+/* ==============================
    CONTENIDO
-========================================== */
+   ============================== */
 
 #content {
     display: flex;
-
-    min-height: 600px;
+    align-items: stretch;
 }
 
-
-/* ==========================================
+/* ==============================
    BARRA LATERAL
-========================================== */
+   ============================== */
 
 #lateral {
-    width: 23%;
-
-    padding: 25px;
-
-    background-color: #fff0f5;
-
-    border-right: 1px solid #eeeeee;
+    width: 220px;
+    padding: 20px 15px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0;
 }
 
 .block_aside {
-    margin-bottom: 30px;
-
-    background-color: white;
-
-    padding: 18px;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 3px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
 }
 
 .block_aside h3 {
-    color: #8e44ad;
-
-    margin-bottom: 15px;
-
-    padding-bottom: 10px;
-
-    border-bottom: 2px solid #ff6b9a;
+    margin: 0 0 12px 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #e9e9e9;
+    border-bottom: 3px solid #00aeef;
+    font-size: 18px;
 }
 
 .block_aside ul {
-    list-style: none;
+    margin: 0;
+    padding-left: 22px;
 }
 
-.block_aside ul li {
-    margin: 12px 0;
+.block_aside li {
+    margin-bottom: 9px;
 }
 
-.block_aside ul li a {
-    color: #555;
-
-    font-weight: bold;
+.block_aside a {
+    color: #222;
+    text-decoration: none;
 }
 
-.block_aside ul li a:hover {
-    color: #ff4f81;
+.block_aside a:hover {
+    color: #00aeef;
 }
 
-.promo {
-    line-height: 1.5;
-
-    margin-bottom: 10px;
+.block_aside p {
+    margin: 8px 0;
+    font-size: 15px;
 }
 
 .promo-price {
-    color: #ff4f81;
-
-    font-size: 20px;
-
     font-weight: bold;
+    font-size: 17px !important;
 }
 
-.contact {
-    margin: 10px 0;
-}
-
-
-/* ==========================================
+/* ==============================
    CONTENIDO CENTRAL
-========================================== */
+   ============================== */
 
 #central {
-    width: 77%;
-
-    padding: 35px;
+    flex: 1;
+    padding: 28px 35px 45px;
 }
-
-
-/* ==========================================
-   PRESENTACIÓN
-========================================== */
 
 .welcome {
     text-align: center;
-
-    padding: 25px;
-
-    margin-bottom: 30px;
-
-    background: linear-gradient(
-        135deg,
-        #fff0f5,
-        #fff7df
-    );
-
-    border-radius: 15px;
+    margin-bottom: 25px;
 }
 
 .welcome h1 {
-    color: #8e44ad;
-
-    font-size: 32px;
-
-    margin-bottom: 10px;
+    margin: 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #ddd;
+    font-size: 27px;
+    font-weight: normal;
 }
 
 .welcome p {
-    color: #666;
-
-    font-size: 17px;
+    margin: 18px 0 0;
+    font-size: 16px;
 }
 
-
-/* ==========================================
-   TÍTULO DE PRODUCTOS
-========================================== */
+/* ==============================
+   TÍTULO PRODUCTOS
+   ============================== */
 
 .title-products {
     text-align: center;
-
-    color: #ff4f81;
-
-    font-size: 28px;
-
-    margin-bottom: 30px;
+    margin: 0 0 25px;
+    font-size: 25px;
 }
 
+/* ==============================
+   PRODUCTOS
+   ============================== */
 
-/* ==========================================
-   TARJETAS DE PRODUCTOS
-========================================== */
+#central {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+    row-gap: 35px;
+}
+
+/* El bloque de bienvenida ocupa todo el ancho */
+.welcome,
+.title-products {
+    grid-column: 1 / -1;
+}
 
 .product {
-    width: 45%;
-
-    margin: 0 2% 30px 2%;
-
-    padding: 20px;
-
-    display: inline-block;
-
-    vertical-align: top;
-
     text-align: center;
-
-    background-color: white;
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 4px 15px rgba(0, 0, 0, 0.10);
-
-    transition:
-        transform 0.3s,
-        box-shadow 0.3s;
+    padding: 0 10px 20px;
 }
 
-.product:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.16);
-}
-
-
-/* ==========================================
-   IMÁGENES DE LOS PRODUCTOS
-========================================== */
+/* IMÁGENES */
 
 .product img {
+    display: block;
     width: 100%;
-
-    height: 220px;
-
+    max-width: 260px;
+    height: 230px;
+    margin: 0 auto 15px;
     object-fit: cover;
-
-    border-radius: 12px;
-
-    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
-
-/* ==========================================
-   NOMBRE DEL PRODUCTO
-========================================== */
+/* NOMBRE */
 
 .product h3 {
-    color: #8e44ad;
-
-    font-size: 22px;
-
-    margin-bottom: 10px;
+    margin: 8px 0;
+    font-size: 19px;
 }
 
-
-/* ==========================================
-   DESCRIPCIÓN
-========================================== */
+/* DESCRIPCIÓN */
 
 .description {
-    color: #666;
-
-    line-height: 1.5;
-
-    min-height: 45px;
-
-    margin-bottom: 10px;
+    width: 90%;
+    margin: 0 auto 12px;
+    min-height: 42px;
+    font-size: 15px;
+    line-height: 1.4;
 }
 
-
-/* ==========================================
-   PRECIO
-========================================== */
+/* PRECIO */
 
 .price {
-    color: #ff4f81;
-
-    font-size: 23px;
-
+    margin: 10px 0 14px;
+    font-size: 18px;
     font-weight: bold;
-
-    margin-bottom: 15px;
 }
 
-
-/* ==========================================
-   BOTÓN COMPRAR
-========================================== */
+/* BOTÓN */
 
 .button {
     display: inline-block;
-
-    background: linear-gradient(
-        135deg,
-        #ff4f81,
-        #ff8c69
-    );
-
+    padding: 10px 25px;
+    background-color: #2caf3e;
     color: white;
-
-    padding: 11px 25px;
-
-    border-radius: 25px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 15px;
 }
 
 .button:hover {
-    background-color: #8e44ad;
-
-    transform: scale(1.05);
+    background-color: #218838;
 }
 
-
-/* ==========================================
+/* ==============================
    PIE DE PÁGINA
-========================================== */
+   ============================== */
 
 #footer {
+    clear: both;
+    padding: 20px;
     text-align: center;
-
-    padding: 25px;
-
-    background-color: #8e44ad;
-
+    background-color: #222;
     color: white;
-
-    line-height: 1.8;
+    border-top: 4px solid #00aeef;
 }
 
+#footer p {
+    margin: 5px;
+    font-size: 14px;
+}
 
-/* ==========================================
-   DISEÑO RESPONSIVO
-========================================== */
+/* ==============================
+   RESPONSIVE
+   ============================== */
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
+
+    #container {
+        width: 95%;
+    }
 
     #content {
         flex-direction: column;
@@ -423,49 +283,35 @@ a {
 
     #lateral {
         width: 100%;
-
         border-right: none;
-
         border-bottom: 1px solid #ddd;
     }
 
     #central {
-        width: 100%;
-    }
-
-    .product {
-        width: 46%;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
+@media (max-width: 600px) {
 
-@media (max-width: 550px) {
-
-    #container {
-        width: 96%;
-
-        margin: 10px auto;
-    }
-
-    #logo span {
-        font-size: 30px;
+    #menu ul {
+        flex-wrap: wrap;
     }
 
     #menu a {
-        padding: 12px;
-
-        font-size: 14px;
+        padding: 12px 15px;
     }
 
     #central {
-        padding: 20px;
+        grid-template-columns: 1fr;
     }
 
-    .product {
-        width: 100%;
+    .welcome,
+    .title-products {
+        grid-column: 1;
+    }
 
-        margin-left: 0;
-
-        margin-right: 0;
+    #logo span {
+        font-size: 28px;
     }
 }
