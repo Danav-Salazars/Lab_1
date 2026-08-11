@@ -3,12 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Granizados Deliciosos</title>
-
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -16,373 +12,146 @@
 
     <div id="container">
 
-        <!-- =========================
-             ENCABEZADO
-        ========================== -->
-
         <header id="header">
-
             <div id="logo">
-
-                <span>🍧 Granizados Deliciosos</span>
-
-                <p>
-                    El sabor que refresca tu día
-                </p>
-
+                <h1>🍧 Granizados Deliciosos</h1>
+                <p>El sabor que refresca tu día</p>
             </div>
-
         </header>
 
-
-        <!-- =========================
-             MENÚ
-        ========================== -->
-
         <nav id="menu">
-
             <ul>
-
-                <li>
-                    <a href="#">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="#">Granizados</a>
-                </li>
-
-                <li>
-                    <a href="#">Sabores</a>
-                </li>
-
-                <li>
-                    <a href="#">Combos</a>
-                </li>
-
-                <li>
-                    <a href="#">Ofertas</a>
-                </li>
-
-                <li>
-                    <a href="#">Contacto</a>
-                </li>
-
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Granizados</a></li>
+                <li><a href="#">Sabores</a></li>
+                <li><a href="#">Combos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
-
         </nav>
-
-
-        <!-- =========================
-             CONTENIDO
-        ========================== -->
 
         <div id="content">
 
+            <aside id="sidebar">
 
-            <!-- =========================
-                 BARRA LATERAL
-            ========================== -->
-
-            <aside id="lateral">
-
-
-                <!-- SABORES -->
-
-                <div class="block_aside">
-
-                    <h3>🍓 Nuestros sabores</h3>
+                <div class="sidebar-box">
+                    <h2> Nuestros sabores</h2>
 
                     <ul>
-
                         <li>Fresa</li>
-
                         <li>Mora</li>
-
                         <li>Mango</li>
-
                         <li>Maracuyá</li>
-
                         <li>Piña</li>
-
                         <li>Lulo</li>
-
                     </ul>
-
                 </div>
 
-
-                <!-- PROMOCIÓN -->
-
-                <div class="block_aside">
-
-                    <h3>🔥 Promoción</h3>
+                <div class="sidebar-box">
+                    <h2> Promoción</h2>
 
                     <p>
                         Disfruta nuestros deliciosos
                         granizados y refresca tu día.
                     </p>
 
-                    <p class="promo-price">
-                        Desde $7.000
-                    </p>
-
+                    <strong>Desde $7.000</strong>
                 </div>
 
+                <div class="sidebar-box">
+                    <h2>Contáctanos</h2>
 
-                <!-- CONTACTO -->
-
-                <div class="block_aside">
-
-                    <h3>📞 Contáctanos</h3>
-
-                    <p>
-                        📱 300 000 0000
-                    </p>
-
-                    <p>
-                        📍 Tu ciudad
-                    </p>
-
+                    <p> 300 000 0000</p>
+                    <p> Tu ciudad</p>
                 </div>
 
             </aside>
 
-
-            <!-- =========================
-                 CONTENIDO CENTRAL
-            ========================== -->
-
-            <main id="central">
-
-
-                <!-- BIENVENIDA -->
+            <main id="main">
 
                 <section class="welcome">
-
-                    <h1>
-                        🍧 Bienvenidos a Granizados Deliciosos
-                    </h1>
+                    <h2>🍧 Bienvenidos a Granizados Deliciosos</h2>
 
                     <p>
                         Encuentra los sabores más refrescantes
                         para disfrutar en cualquier momento.
                     </p>
-
                 </section>
-
-
-                <!-- TÍTULO -->
 
                 <h2 class="title-products">
                     Nuestros granizados
                 </h2>
 
+                <div class="productos">
 
-                <!-- =========================
-                     FRESA
-                ========================== -->
+                    <div class="product">
+                        <img src="img/fresa.jpg" alt="Granizado de Fresa">
+                        <h3>Granizado de Fresa</h3>
+                        <p class="description">
+                            Delicioso granizado con un refrescante sabor a fresa.
+                        </p>
+                        <p class="price">$8.000</p>
+                        <button>Comprar</button>
+                    </div>
 
-                <article class="product">
+                    <div class="product">
+                        <img src="img/mora.jpg" alt="Granizado de Mora">
+                        <h3>Granizado de Mora</h3>
+                        <p class="description">
+                            Refrescante granizado con delicioso sabor a mora.
+                        </p>
+                        <p class="price">$8.000</p>
+                        <button>Comprar</button>
+                    </div>
 
-                    <img
-                        src="img/fresa.jpg"
-                        alt="Granizado de fresa"
-                    >
+                    <div class="product">
+                        <img src="img/mango.jpg" alt="Granizado de Mango">
+                        <h3>Granizado de Mango</h3>
+                        <p class="description">
+                            Delicioso sabor tropical de mango para refrescarte.
+                        </p>
+                        <p class="price">$8.000</p>
+                        <button>Comprar</button>
+                    </div>
 
-                    <h3>
-                        Granizado de Fresa
-                    </h3>
+                    <div class="product">
+                        <img src="img/maracuya.jpg" alt="Granizado de Maracuyá">
+                        <h3>Granizado de Maracuyá</h3>
+                        <p class="description">
+                            El sabor tropical y refrescante del maracuyá.
+                        </p>
+                        <p class="price">$8.000</p>
+                        <button>Comprar</button>
+                    </div>
 
-                    <p class="description">
-                        Delicioso granizado con un
-                        refrescante sabor a fresa.
-                    </p>
+                    <div class="product">
+                        <img src="img/piña.jpg" alt="Granizado de Piña">
+                        <h3>Granizado de Piña</h3>
+                        <p class="description">
+                            Delicioso y refrescante sabor a piña.
+                        </p>
+                        <p class="price">$8.000</p>
+                        <button>Comprar</button>
+                    </div>
 
-                    <p class="price">
-                        $8.000
-                    </p>
+                    <div class="product">
+                        <img src="img/lulo.jpg" alt="Granizado de Lulo">
+                        <h3>Granizado de Lulo</h3>
+                        <p class="description">
+                            Refrescante granizado con delicioso sabor a lulo.
+                        </p>
+                        <p class="price">$8.000</p>
+                        <button>Comprar</button>
+                    </div>
 
-                    <a href="#" class="button">
-                        Comprar
-                    </a>
-
-                </article>
-
-
-                <!-- =========================
-                     MORA
-                ========================== -->
-
-                <article class="product">
-
-                    <img
-                        src="img/mora.jpg"
-                        alt="Granizado de mora"
-                    >
-
-                    <h3>
-                        Granizado de Mora
-                    </h3>
-
-                    <p class="description">
-                        Refrescante granizado con
-                        delicioso sabor a mora.
-                    </p>
-
-                    <p class="price">
-                        $8.000
-                    </p>
-
-                    <a href="#" class="button">
-                        Comprar
-                    </a>
-
-                </article>
-
-
-                <!-- =========================
-                     MANGO
-                ========================== -->
-
-                <article class="product">
-
-                    <img
-                        src="img/mango.jpg"
-                        alt="Granizado de mango"
-                    >
-
-                    <h3>
-                        Granizado de Mango
-                    </h3>
-
-                    <p class="description">
-                        Delicioso sabor tropical de
-                        mango para refrescarte.
-                    </p>
-
-                    <p class="price">
-                        $8.000
-                    </p>
-
-                    <a href="#" class="button">
-                        Comprar
-                    </a>
-
-                </article>
-
-
-                <!-- =========================
-                     MARACUYÁ
-                ========================== -->
-
-                <article class="product">
-
-                    <img
-                        src="img/maracuya.jpg"
-                        alt="Granizado de maracuyá"
-                    >
-
-                    <h3>
-                        Granizado de Maracuyá
-                    </h3>
-
-                    <p class="description">
-                        El sabor tropical y refrescante
-                        del maracuyá.
-                    </p>
-
-                    <p class="price">
-                        $8.000
-                    </p>
-
-                    <a href="#" class="button">
-                        Comprar
-                    </a>
-
-                </article>
-
-
-                <!-- =========================
-                     PIÑA
-                ========================== -->
-
-                <article class="product">
-
-                    <img
-                        src="img/piña.jpg"
-                        alt="Granizado de piña"
-                    >
-
-                    <h3>
-                        Granizado de Piña
-                    </h3>
-
-                    <p class="description">
-                        Refrescante granizado con
-                        delicioso sabor a piña.
-                    </p>
-
-                    <p class="price">
-                        $8.000
-                    </p>
-
-                    <a href="#" class="button">
-                        Comprar
-                    </a>
-
-                </article>
-
-
-                <!-- =========================
-                     LULO
-                ========================== -->
-
-                <article class="product">
-
-                    <img
-                        src="img/lulo.jpg"
-                        alt="Granizado de lulo"
-                    >
-
-                    <h3>
-                        Granizado de Lulo
-                    </h3>
-
-                    <p class="description">
-                        Refrescante y delicioso sabor
-                        tropical de lulo.
-                    </p>
-
-                    <p class="price">
-                        $8.000
-                    </p>
-
-                    <a href="#" class="button">
-                        Comprar
-                    </a>
-
-                </article>
-
+                </div>
 
             </main>
 
         </div>
 
-
-        <!-- =========================
-             PIE DE PÁGINA
-        ========================== -->
-
         <footer id="footer">
-
-            <p>
-                © 2026 Granizados Deliciosos
-            </p>
-
-            <p>
-                Todos los derechos reservados.
-            </p>
-
+            <p>© 2026 Granizados Deliciosos - Todos los derechos reservados Dana Valentina Salazar Suarez </p>
         </footer>
 
     </div>
