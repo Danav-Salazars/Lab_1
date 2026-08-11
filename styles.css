@@ -1,7 +1,6 @@
-
-/* =========================================
-   ESTILOS GENERALES
-========================================= */
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
 
 * {
     margin: 0;
@@ -11,7 +10,8 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: #fff4f8;
+    color: #333;
 }
 
 a {
@@ -19,270 +19,403 @@ a {
 }
 
 
-/* =========================================
+/* ==========================================
    CONTENEDOR PRINCIPAL
-========================================= */
+========================================== */
 
 #container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 30px auto;
+    width: 92%;
+    max-width: 1250px;
+    margin: 25px auto;
+
     background-color: white;
-    box-shadow: 0 0 10px #cccccc;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
+/* ==========================================
+   ENCABEZADO
+========================================== */
 
 #header {
-    height: 140px;
-    background-color: #f5f5f5;
-    display: flex;
-    align-items: center;
-}
+    min-height: 160px;
 
-#logo {
-    margin-left: 35px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #ff6b9a,
+        #ff9a76,
+        #ffd166
+    );
+
+    color: white;
 }
 
 #logo span {
-    font-size: 40px;
+    display: block;
+
+    font-size: 42px;
+
     font-weight: bold;
-    letter-spacing: 3px;
-    color: #01a9e8;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#logo p {
+    font-size: 18px;
 }
 
 
-/* =========================================
-   MENÚ
-========================================= */
+/* ==========================================
+   MENÚ DE NAVEGACIÓN
+========================================== */
 
 #menu {
-    height: 55px;
-    background-color: #222222;
-    border-bottom: 4px solid #01a9e8;
+    background-color: #8e44ad;
 }
 
 #menu ul {
     list-style: none;
+
     display: flex;
-    height: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
 }
 
 #menu ul li {
-    height: 100%;
+    display: inline-block;
 }
 
 #menu a {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 20px;
+    display: block;
+
     color: white;
+
+    padding: 17px 22px;
+
+    font-weight: bold;
+
     transition: 0.3s;
 }
 
 #menu a:hover {
-    background-color: #01a9e8;
+    background-color: #ff6b9a;
 }
 
 
-/* =========================================
+/* ==========================================
    CONTENIDO
-========================================= */
+========================================== */
 
 #content {
     display: flex;
-    min-height: 550px;
+
+    min-height: 600px;
 }
 
 
-/* =========================================
+/* ==========================================
    BARRA LATERAL
-========================================= */
+========================================== */
 
 #lateral {
-    width: 22%;
-    padding: 20px;
-    border-right: 1px solid #dddddd;
+    width: 23%;
+
+    padding: 25px;
+
+    background-color: #fff0f5;
+
+    border-right: 1px solid #eeeeee;
 }
 
 .block_aside {
     margin-bottom: 30px;
+
+    background-color: white;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-#lateral h3 {
-    text-align: center;
-    background-color: #e9e9e9;
-    padding: 10px;
+.block_aside h3 {
+    color: #8e44ad;
+
     margin-bottom: 15px;
-    border-bottom: 3px solid #01a9e8;
-    color: #222222;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #ff6b9a;
 }
 
-
-/* LISTA LATERAL */
-
-#lateral ul {
-    list-style: square;
-    padding-left: 25px;
+.block_aside ul {
+    list-style: none;
 }
 
-#lateral ul li {
-    margin: 10px 0;
+.block_aside ul li {
+    margin: 12px 0;
 }
 
-#lateral ul li a {
-    color: #333333;
-}
+.block_aside ul li a {
+    color: #555;
 
-#lateral ul li a:hover {
-    color: #01a9e8;
-}
-
-
-/* =========================================
-   FORMULARIO
-========================================= */
-
-label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 5px;
     font-weight: bold;
 }
 
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 9px;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
+.block_aside ul li a:hover {
+    color: #ff4f81;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #01a9e8;
-    outline: none;
-}
+.promo {
+    line-height: 1.5;
 
-
-/* BOTÓN */
-
-input[type="submit"] {
-    margin-top: 15px;
-    padding: 9px 15px;
-    border: none;
-    border-radius: 3px;
-    background-color: #2979cd;
-    color: white;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #01a9e8;
-}
-
-
-/* =========================================
-   CONTENIDO CENTRAL
-========================================= */
-
-#central {
-    width: 78%;
-    padding: 30px;
-}
-
-#central h1 {
-    text-align: center;
-    font-size: 28px;
-    font-weight: normal;
-    color: #333333;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #cccccc;
-}
-
-
-/* =========================================
-   PRODUCTOS
-========================================= */
-
-.product {
-    width: 31%;
-    margin: 0 1%;
-    margin-bottom: 30px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-}
-
-.product img {
-    width: 100%;
-    max-width: 220px;
-    height: 180px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.product h2 {
-    font-size: 19px;
-    color: #333333;
     margin-bottom: 10px;
 }
 
-.product p {
-    font-size: 18px;
+.promo-price {
+    color: #ff4f81;
+
+    font-size: 20px;
+
     font-weight: bold;
-    color: #555555;
+}
+
+.contact {
+    margin: 10px 0;
+}
+
+
+/* ==========================================
+   CONTENIDO CENTRAL
+========================================== */
+
+#central {
+    width: 77%;
+
+    padding: 35px;
+}
+
+
+/* ==========================================
+   PRESENTACIÓN
+========================================== */
+
+.welcome {
+    text-align: center;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #fff7df
+    );
+
+    border-radius: 15px;
+}
+
+.welcome h1 {
+    color: #8e44ad;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   TÍTULO DE PRODUCTOS
+========================================== */
+
+.title-products {
+    text-align: center;
+
+    color: #ff4f81;
+
+    font-size: 28px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   TARJETAS DE PRODUCTOS
+========================================== */
+
+.product {
+    width: 45%;
+
+    margin: 0 2% 30px 2%;
+
+    padding: 20px;
+
+    display: inline-block;
+
+    vertical-align: top;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ==========================================
+   IMÁGENES DE LOS PRODUCTOS
+========================================== */
+
+.product img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
     margin-bottom: 15px;
 }
 
 
-/* =========================================
+/* ==========================================
+   NOMBRE DEL PRODUCTO
+========================================== */
+
+.product h3 {
+    color: #8e44ad;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   DESCRIPCIÓN
+========================================== */
+
+.description {
+    color: #666;
+
+    line-height: 1.5;
+
+    min-height: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   PRECIO
+========================================== */
+
+.price {
+    color: #ff4f81;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
    BOTÓN COMPRAR
-========================================= */
+========================================== */
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #33ae3d;
-    border: 1px solid #23852c;
-    border-radius: 3px;
+
+    background: linear-gradient(
+        135deg,
+        #ff4f81,
+        #ff8c69
+    );
+
     color: white;
+
+    padding: 11px 25px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
     transition: 0.3s;
 }
 
 .button:hover {
-    background-color: #25872e;
+    background-color: #8e44ad;
+
+    transform: scale(1.05);
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
 
 #footer {
-    clear: both;
-    padding: 20px;
     text-align: center;
+
+    padding: 25px;
+
+    background-color: #8e44ad;
+
     color: white;
-    background-color: #222222;
-    border-top: 4px solid #01a9e8;
+
+    line-height: 1.8;
 }
 
 
-/* =========================================
+/* ==========================================
    DISEÑO RESPONSIVO
-========================================= */
+========================================== */
 
-@media (max-width: 800px) {
-
-    #container {
-        width: 95%;
-    }
+@media (max-width: 850px) {
 
     #content {
         flex-direction: column;
@@ -290,8 +423,10 @@ input[type="submit"]:hover {
 
     #lateral {
         width: 100%;
+
         border-right: none;
-        border-bottom: 1px solid #dddddd;
+
+        border-bottom: 1px solid #ddd;
     }
 
     #central {
@@ -299,29 +434,38 @@ input[type="submit"]:hover {
     }
 
     .product {
-        width: 45%;
+        width: 46%;
     }
-
 }
 
-@media (max-width: 500px) {
 
-    #menu ul {
-        flex-wrap: wrap;
-        height: auto;
+@media (max-width: 550px) {
+
+    #container {
+        width: 96%;
+
+        margin: 10px auto;
     }
 
-    #menu {
-        height: auto;
+    #logo span {
+        font-size: 30px;
     }
 
     #menu a {
-        padding: 15px 10px;
+        padding: 12px;
+
+        font-size: 14px;
+    }
+
+    #central {
+        padding: 20px;
     }
 
     .product {
         width: 100%;
-    }
 
+        margin-left: 0;
+
+        margin-right: 0;
+    }
 }
-```
