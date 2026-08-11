@@ -1,6 +1,6 @@
-/* ==============================
+/* =========================================
    ESTILOS GENERALES
-   ============================== */
+   ========================================= */
 
 * {
     box-sizing: border-box;
@@ -14,6 +14,10 @@ body {
     color: #222;
 }
 
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+
 #container {
     width: 1100px;
     margin: 30px auto;
@@ -21,9 +25,9 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
 }
 
-/* ==============================
+/* =========================================
    ENCABEZADO
-   ============================== */
+   ========================================= */
 
 #header {
     height: 150px;
@@ -43,9 +47,9 @@ body {
     font-size: 17px;
 }
 
-/* ==============================
-   MENÚ
-   ============================== */
+/* =========================================
+   MENÚ DE NAVEGACIÓN
+   ========================================= */
 
 #menu {
     background-color: #222;
@@ -75,18 +79,18 @@ body {
     background-color: #00aeef;
 }
 
-/* ==============================
-   CONTENIDO
-   ============================== */
+/* =========================================
+   CONTENIDO GENERAL
+   ========================================= */
 
 #content {
     display: flex;
     align-items: stretch;
 }
 
-/* ==============================
+/* =========================================
    BARRA LATERAL
-   ============================== */
+   ========================================= */
 
 #lateral {
     width: 220px;
@@ -136,23 +140,42 @@ body {
     font-size: 17px !important;
 }
 
-/* ==============================
+/* =========================================
    CONTENIDO CENTRAL
-   ============================== */
+   ========================================= */
 
 #central {
     flex: 1;
-    padding: 28px 35px 45px;
+    padding: 30px 35px 50px;
+
+    display: grid;
+
+    /* Dos columnas iguales */
+    grid-template-columns: repeat(2, 330px);
+
+    /* Centrar los productos */
+    justify-content: center;
+
+    /* Separación horizontal */
+    column-gap: 55px;
+
+    /* Separación vertical */
+    row-gap: 45px;
 }
 
+/* =========================================
+   BIENVENIDA
+   ========================================= */
+
 .welcome {
+    grid-column: 1 / -1;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 0;
 }
 
 .welcome h1 {
     margin: 0;
-    padding-bottom: 14px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #ddd;
     font-size: 27px;
     font-weight: normal;
@@ -163,119 +186,192 @@ body {
     font-size: 16px;
 }
 
-/* ==============================
-   TÍTULO PRODUCTOS
-   ============================== */
+/* =========================================
+   TÍTULO DE PRODUCTOS
+   ========================================= */
 
-.title-products {
-    text-align: center;
-    margin: 0 0 25px;
-    font-size: 25px;
-}
-
-/* ==============================
-   PRODUCTOS
-   ============================== */
-
-#central {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 35px;
-    row-gap: 35px;
-}
-
-/* El bloque de bienvenida ocupa todo el ancho */
-.welcome,
 .title-products {
     grid-column: 1 / -1;
-}
 
-.product {
     text-align: center;
-    padding: 0 10px 20px;
-}
 
-/* IMÁGENES */
+    margin: 0;
 
-.product img {
-    display: block;
-    width: 100%;
-    max-width: 260px;
-    height: 230px;
-    margin: 0 auto 15px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-/* NOMBRE */
-
-.product h3 {
-    margin: 8px 0;
-    font-size: 19px;
-}
-
-/* DESCRIPCIÓN */
-
-.description {
-    width: 90%;
-    margin: 0 auto 12px;
-    min-height: 42px;
-    font-size: 15px;
-    line-height: 1.4;
-}
-
-/* PRECIO */
-
-.price {
-    margin: 10px 0 14px;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-/* BOTÓN */
+/* =========================================
+   TARJETAS DE PRODUCTOS
+   ========================================= */
+
+.product {
+    width: 330px;
+
+    text-align: center;
+
+    padding: 0 10px 25px;
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el mouse */
+
+.product:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================
+   IMÁGENES DE PRODUCTOS
+   ========================================= */
+
+.product img {
+    display: block;
+
+    width: 300px;
+    height: 230px;
+
+    margin: 0 auto 16px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   NOMBRE DEL PRODUCTO
+   ========================================= */
+
+.product h3 {
+    margin: 10px 0 7px;
+
+    font-size: 19px;
+
+    font-weight: bold;
+}
+
+/* =========================================
+   DESCRIPCIÓN
+   ========================================= */
+
+.description {
+    width: 290px;
+
+    min-height: 45px;
+
+    margin: 0 auto 12px;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    color: #444;
+}
+
+/* =========================================
+   PRECIO
+   ========================================= */
+
+.price {
+    margin: 12px 0 15px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+/* =========================================
+   BOTÓN COMPRAR
+   ========================================= */
 
 .button {
     display: inline-block;
-    padding: 10px 25px;
+
+    padding: 10px 28px;
+
     background-color: #2caf3e;
+
     color: white;
+
     text-decoration: none;
-    border-radius: 4px;
+
+    border-radius: 5px;
+
     font-size: 15px;
+
+    transition: background-color 0.2s ease;
 }
 
 .button:hover {
     background-color: #218838;
 }
 
-/* ==============================
+/* =========================================
    PIE DE PÁGINA
-   ============================== */
+   ========================================= */
 
 #footer {
     clear: both;
+
     padding: 20px;
+
     text-align: center;
+
     background-color: #222;
+
     color: white;
+
     border-top: 4px solid #00aeef;
 }
 
 #footer p {
     margin: 5px;
+
     font-size: 14px;
 }
 
-/* ==============================
-   RESPONSIVE
-   ============================== */
+/* =========================================
+   DISEÑO PARA PANTALLAS MEDIANAS
+   ========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     #container {
         width: 95%;
     }
+
+    #central {
+        grid-template-columns: repeat(2, minmax(250px, 330px));
+
+        column-gap: 25px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* =========================================
+   DISEÑO PARA TABLETS
+   ========================================= */
+
+@media (max-width: 800px) {
 
     #content {
         flex-direction: column;
@@ -283,16 +379,57 @@ body {
 
     #lateral {
         width: 100%;
+
         border-right: none;
+
         border-bottom: 1px solid #ddd;
     }
 
     #central {
         grid-template-columns: repeat(2, 1fr);
+
+        column-gap: 20px;
+
+        padding: 30px 20px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product img {
+        width: 100%;
+        height: 220px;
     }
 }
 
+/* =========================================
+   DISEÑO PARA CELULARES
+   ========================================= */
+
 @media (max-width: 600px) {
+
+    #container {
+        width: 100%;
+
+        margin: 0;
+    }
+
+    #header {
+        height: auto;
+
+        padding: 25px 20px;
+    }
+
+    #logo span {
+        font-size: 28px;
+    }
+
+    #logo p {
+        font-size: 15px;
+    }
+
+    /* Menú */
 
     #menu ul {
         flex-wrap: wrap;
@@ -300,10 +437,18 @@ body {
 
     #menu a {
         padding: 12px 15px;
+
+        font-size: 14px;
     }
+
+    /* Productos */
 
     #central {
         grid-template-columns: 1fr;
+
+        padding: 25px 15px;
+
+        row-gap: 35px;
     }
 
     .welcome,
@@ -311,7 +456,24 @@ body {
         grid-column: 1;
     }
 
-    #logo span {
-        font-size: 28px;
+    .product {
+        width: 100%;
+
+        max-width: 330px;
+
+        margin: 0 auto;
+    }
+
+    .product img {
+        width: 100%;
+
+        max-width: 300px;
+
+        height: 230px;
+    }
+
+    .description {
+        width: 100%;
+        max-width: 290px;
     }
 }
