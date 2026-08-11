@@ -1,5 +1,5 @@
 /* =========================================
-   CONFIGURACIÓN GENERAL
+   ESTILOS GENERALES
    ========================================= */
 
 * {
@@ -12,7 +12,7 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
 
-    background-color: #f4f4f4;
+    background-color: #f2f2f2;
 
     color: #222;
 }
@@ -23,14 +23,17 @@ body {
    ========================================= */
 
 #container {
-    width: 1100px;
+    width: 1000px;
 
-    margin: 30px auto;
+    max-width: 95%;
+
+    margin: 25px auto;
 
     background-color: white;
 
-    box-shadow:
-        0 0 15px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+
+    min-height: 800px;
 }
 
 
@@ -39,15 +42,15 @@ body {
    ========================================= */
 
 #header {
-    min-height: 150px;
-
-    padding: 35px 45px;
+    padding: 28px 35px;
 
     background-color: white;
 }
 
 #logo span {
-    font-size: 38px;
+    display: block;
+
+    font-size: 32px;
 
     font-weight: bold;
 
@@ -57,9 +60,11 @@ body {
 }
 
 #logo p {
-    margin: 8px 0 0 5px;
+    margin: 5px 0 0;
 
-    font-size: 17px;
+    font-size: 15px;
+
+    color: #333;
 }
 
 
@@ -74,13 +79,15 @@ body {
 }
 
 #menu ul {
+    list-style: none;
+
     margin: 0;
 
     padding: 0;
 
-    list-style: none;
-
     display: flex;
+
+    align-items: center;
 }
 
 #menu li {
@@ -90,28 +97,32 @@ body {
 #menu a {
     display: block;
 
-    padding: 17px 25px;
+    padding: 14px 20px;
 
     color: white;
 
     text-decoration: none;
 
-    font-size: 16px;
+    font-size: 14px;
 }
 
 #menu a:hover {
     background-color: #00aeef;
+
+    color: white;
 }
 
 
 /* =========================================
-   CONTENIDO
+   ESTRUCTURA DE LA PÁGINA
    ========================================= */
 
 #content {
     display: flex;
 
     align-items: stretch;
+
+    min-height: 650px;
 }
 
 
@@ -119,22 +130,23 @@ body {
    BARRA LATERAL
    ========================================= */
 
-#lateral {
-    width: 220px;
+#sidebar {
+    width: 210px;
 
-    padding: 20px 15px;
+    flex-shrink: 0;
+
+    padding: 18px 12px;
 
     border-right: 1px solid #ddd;
 
-    flex-shrink: 0;
+    background-color: white;
 }
 
-.block_aside {
-    margin-bottom: 25px;
-}
 
-.block_aside h3 {
-    margin: 0 0 12px 0;
+/* Títulos de la barra lateral */
+
+.sidebar-title {
+    margin: 0 0 10px;
 
     padding: 10px;
 
@@ -144,29 +156,33 @@ body {
 
     border-bottom: 3px solid #00aeef;
 
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.block_aside ul {
-    margin: 0;
 
-    padding-left: 22px;
+/* Listas */
+
+#sidebar ul {
+    margin: 0 0 25px;
+
+    padding-left: 20px;
 }
 
-.block_aside li {
-    margin-bottom: 9px;
+#sidebar li {
+    margin-bottom: 8px;
+
+    font-size: 14px;
 }
 
-.block_aside p {
-    margin: 8px 0;
 
-    font-size: 15px;
-}
+/* Texto */
 
-.promo-price {
-    font-weight: bold;
+#sidebar p {
+    margin: 10px 0 20px;
 
-    font-size: 17px !important;
+    font-size: 14px;
+
+    line-height: 1.35;
 }
 
 
@@ -177,93 +193,88 @@ body {
 #central {
     flex: 1;
 
-    padding: 30px 25px 50px;
+    padding: 25px 20px 50px;
 
+    /* 3 granizados por fila */
     display: grid;
 
-    /*
-       Dos columnas de productos
-    */
+    grid-template-columns: repeat(3, 1fr);
 
-    grid-template-columns:
-        repeat(2, 330px);
-
-    /*
-       Centrar las tarjetas
-    */
-
-    justify-content: center;
-
-    /*
-       Separación horizontal
-    */
-
-    column-gap: 45px;
-
-    /*
-       Separación vertical
-    */
+    column-gap: 15px;
 
     row-gap: 45px;
+
+    justify-items: center;
+
+    align-items: start;
 }
 
 
 /* =========================================
-   BIENVENIDA
+   TÍTULO PRINCIPAL
    ========================================= */
 
-.welcome {
+#central > h1 {
     grid-column: 1 / -1;
 
-    text-align: center;
-}
+    width: 100%;
 
-.welcome h1 {
-    margin: 0;
+    margin: 0 0 5px;
 
-    padding-bottom: 15px;
-
-    border-bottom: 1px solid #ddd;
-
-    font-size: 27px;
-
-    font-weight: normal;
-}
-
-.welcome p {
-    margin: 18px 0 0;
-
-    font-size: 16px;
-}
-
-
-/* =========================================
-   TÍTULO DE PRODUCTOS
-   ========================================= */
-
-.title-products {
-    grid-column: 1 / -1;
+    padding-bottom: 12px;
 
     text-align: center;
-
-    margin: 0;
 
     font-size: 25px;
 
-    font-weight: bold;
+    font-weight: normal;
+
+    border-bottom: 1px solid #ccc;
+
+    color: #222;
+}
+
+
+/* Texto introductorio */
+
+#central > p {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* Título "Nuestros granizados" */
+
+#central > h2 {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    margin: 5px 0 0;
+
+    text-align: center;
+
+    font-size: 20px;
 }
 
 
 /* =========================================
-   TARJETAS
+   PRODUCTOS
    ========================================= */
 
 .product {
-    width: 330px;
+    width: 210px;
 
     text-align: center;
 
-    padding: 0 10px 25px;
+    padding: 0 5px 20px;
 
     background-color: white;
 
@@ -275,35 +286,27 @@ body {
 }
 
 
-/* =========================================
-   EFECTO AL PASAR EL MOUSE
-   ========================================= */
+/* Efecto al pasar el mouse */
 
 .product:hover {
     transform: translateY(-4px);
 
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 
 /* =========================================
-   FOTOS
+   IMÁGENES DE LOS GRANIZADOS
    ========================================= */
 
 .product img {
     display: block;
 
-    width: 300px;
+    width: 200px;
 
-    height: 230px;
+    height: 190px;
 
-    margin: 0 auto 16px;
-
-    /*
-       Hace que todas las imágenes
-       tengan exactamente el mismo tamaño
-    */
+    margin: 0 auto 14px;
 
     object-fit: cover;
 
@@ -317,15 +320,17 @@ body {
 
 
 /* =========================================
-   NOMBRE
+   NOMBRE DEL PRODUCTO
    ========================================= */
 
 .product h3 {
-    margin: 10px 0 7px;
+    margin: 0 0 5px;
 
-    font-size: 19px;
+    font-size: 17px;
 
-    font-weight: bold;
+    line-height: 1.25;
+
+    color: #222;
 }
 
 
@@ -334,13 +339,13 @@ body {
    ========================================= */
 
 .description {
-    width: 290px;
+    width: 200px;
 
     min-height: 45px;
 
     margin: 0 auto 12px;
 
-    font-size: 15px;
+    font-size: 14px;
 
     line-height: 1.4;
 
@@ -353,107 +358,93 @@ body {
    ========================================= */
 
 .price {
-    margin: 12px 0 15px;
+    margin: 8px 0 12px;
 
-    font-size: 18px;
+    font-size: 15px;
 
     font-weight: bold;
+
+    color: #222;
 }
 
 
 /* =========================================
-   BOTÓN
+   BOTÓN COMPRAR
    ========================================= */
 
-.button {
-    display: inline-block;
+.product button {
+    padding: 9px 22px;
 
-    padding: 10px 28px;
+    border: none;
+
+    border-radius: 4px;
 
     background-color: #2caf3e;
 
     color: white;
 
-    text-decoration: none;
+    font-size: 14px;
 
-    border-radius: 5px;
-
-    font-size: 15px;
-
-    transition:
-        background-color 0.2s ease;
+    cursor: pointer;
 }
 
-.button:hover {
+.product button:hover {
     background-color: #218838;
 }
 
 
 /* =========================================
-   PIE DE PÁGINA
+   BOTONES GENERALES
    ========================================= */
 
-#footer {
-    clear: both;
-
-    padding: 20px;
-
-    text-align: center;
-
-    background-color: #222;
-
-    color: white;
-
-    border-top: 4px solid #00aeef;
-}
-
-#footer p {
-    margin: 5px;
-
-    font-size: 14px;
+button {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /* =========================================
-   TABLETS
+   RESPONSIVE
    ========================================= */
 
-@media (max-width: 1000px) {
+/* Tablet */
+
+@media (max-width: 850px) {
 
     #container {
         width: 95%;
     }
 
+    #sidebar {
+        width: 190px;
+    }
+
     #central {
-        grid-template-columns:
-            repeat(2, minmax(250px, 330px));
+        grid-template-columns: repeat(2, 1fr);
 
-        column-gap: 25px;
-    }
-
-    .product {
-        width: 100%;
-    }
-
-    .product img {
-        width: 100%;
-
-        max-width: 300px;
+        column-gap: 20px;
     }
 }
 
 
-/* =========================================
-   PANTALLAS PEQUEÑAS
-   ========================================= */
+/* Celular */
 
-@media (max-width: 800px) {
+@media (max-width: 650px) {
+
+    #container {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0;
+
+        box-shadow: none;
+    }
 
     #content {
         flex-direction: column;
     }
 
-    #lateral {
+    #sidebar {
         width: 100%;
 
         border-right: none;
@@ -461,101 +452,35 @@ body {
         border-bottom: 1px solid #ddd;
     }
 
-    #central {
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        column-gap: 20px;
-
-        padding: 30px 20px;
-    }
-
-    .product {
-        width: 100%;
-    }
-
-    .product img {
-        width: 100%;
-
-        height: 220px;
-    }
-}
-
-
-/* =========================================
-   CELULARES
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    #container {
-        width: 100%;
-
-        margin: 0;
-    }
-
-    #header {
-        height: auto;
-
-        padding: 25px 20px;
-    }
-
-    #logo span {
-        font-size: 28px;
-    }
-
-    #logo p {
-        font-size: 15px;
-    }
-
-
-    /* MENÚ */
-
     #menu ul {
         flex-wrap: wrap;
     }
 
     #menu a {
-        padding: 12px 15px;
+        padding: 12px 10px;
 
-        font-size: 14px;
+        font-size: 13px;
     }
-
-
-    /* PRODUCTOS */
 
     #central {
         grid-template-columns: 1fr;
 
-        padding: 25px 15px;
-
         row-gap: 35px;
-    }
 
-    .welcome,
-    .title-products {
-        grid-column: 1;
+        padding: 25px 10px 40px;
     }
 
     .product {
-        width: 100%;
-
-        max-width: 330px;
-
-        margin: 0 auto;
+        width: 230px;
     }
 
     .product img {
-        width: 100%;
+        width: 220px;
 
-        max-width: 300px;
-
-        height: 230px;
+        height: 200px;
     }
 
     .description {
-        width: 100%;
-
-        max-width: 290px;
+        width: 220px;
     }
 }
